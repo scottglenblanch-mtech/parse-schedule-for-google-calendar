@@ -7,5 +7,5 @@
 example:
 
 ```
-python3 ./parse-schedule.py --input-file ./cohort-19-schedule.csv --output-file test-file.ics --instructor-name "Scott B."
+python3 ./parse-schedule.py --input-file ./cohort-19-schedule.csv --output-file ./test-file.ics --instructor-name "Scott B."
 ```

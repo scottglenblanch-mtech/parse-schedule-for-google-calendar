@@ -17,8 +17,7 @@ def get_elements(file_path):
     return next(reader)
 
 
-def get_indices_with_matching_value(elements, matching_value):
-    # Get the indices of each element in the array that has a string value of 'Scott B'
+def get_indices_with_instructor_name(elements, matching_value):
     indices = [index for index, value in enumerate(elements) if value == matching_value]
     
     return indices
@@ -59,10 +58,10 @@ def create_import_calendar_file(output_file_path, new_file_contents):
 
 # Example usage
 def main():
-    input_file_path, output_file_path, matching_value  = get_script_input_arguments()
+    input_file_path, output_file_path, instructor_name  = get_script_input_arguments()
     
     elements =  get_elements(input_file_path)
-    indices = get_indices_with_matching_value(elements, matching_value)
+    indices = get_indices_with_instructor_name(elements, instructor_name)
     new_file_contents = create_import_events_file_contents(elements, indices)
 
     create_import_calendar_file(output_file_path, new_file_contents)
